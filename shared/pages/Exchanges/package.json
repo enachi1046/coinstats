@@ -1,0 +1,6 @@
+{
+  "name": "Exchanges",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./Exchanges.js"
+}

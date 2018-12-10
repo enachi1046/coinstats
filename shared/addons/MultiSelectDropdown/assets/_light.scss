@@ -1,0 +1,14 @@
+
+.main-body.light-mode {
+  .multi-select-dropdown {
+    background: white;
+  }
+  .multi-select-dropdown-placeholder {
+    background-image: url('/images/arrowDownlight.svg');
+    color: black;
+  }
+  .multi-select-dropdown-item {
+    background: white;
+    color: black;
+  }  
+}

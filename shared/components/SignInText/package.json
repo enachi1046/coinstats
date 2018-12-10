@@ -1,0 +1,6 @@
+{
+  "name": "SignInText",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./SignInText.js"
+}

@@ -1,0 +1,76 @@
+@import "../../assets/styles/variable";
+footer {
+  flex: 0;
+  background-color: rgba(var(--theme-text-i), 0.07);
+  padding: rem(46) 0 rem(37);
+  h6 {
+    opacity: 0.4;
+    font-size: rem(12);
+    font-weight: bold;
+    line-height: normal;
+    letter-spacing: rem(2.5);
+    text-transform: uppercase;
+    margin: rem(46) 0 rem(20);
+  }
+  .download-icons {
+    display: flex;
+    @include mobile {
+      flex-direction: column;
+      align-items: center;
+    }
+    a, img {
+      display: block;
+    }
+    a + a {
+      margin: 0 0 0 rem(30);
+      @include mobile {
+        margin: 18px 0 0;
+      }
+    }
+    img {
+      height: rem(40);
+    }
+  }
+  .social-touch {
+    display: flex;
+    a {
+      color: rgba(var(--theme-text-i), 0.5);
+      font-size: rem(28);
+      &:hover {
+        color: $hero;
+      }
+      + a {
+        margin: 0 0 0 rem(20);
+      }
+    }
+  }
+}
+.footer-nav {
+  margin: rem(36) 0 0;
+  display: flex;
+  justify-content: center;
+  @include mobile {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: rem(32) 0 0;
+  }
+  a {
+    opacity: 0.8;
+    font-size: rem(16);
+    font-weight: normal;
+    line-height: normal;
+    color: var(--theme-text);
+    &:hover, &.active {
+      color: $hero;
+    }
+    + a {
+      margin: 0 0 0 rem(88);
+    }
+    @include mobile {
+      margin: 14px 30px;
+      + a {
+        margin: 14px 30px;
+      }
+    }
+  }
+}

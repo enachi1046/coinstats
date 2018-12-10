@@ -1,0 +1,6 @@
+{
+  "name": "Holdings",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./Holdings.js"
+}

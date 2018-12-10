@@ -1,0 +1,22 @@
+.signin-text {
+  p {
+    font-size: 17px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffffff;
+  }
+
+  .cs-btn {
+    max-width: 216px;
+    min-width: unset;
+    text-transform: capitalize;
+  }
+}
+
+.light-mode .sigin-text p {
+  color: #222;
+}

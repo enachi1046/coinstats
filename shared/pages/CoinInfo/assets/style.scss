@@ -1,0 +1,123 @@
+@import '../../../assets/styles/colors/dark';
+@import '../../../assets/styles/colors/light';
+@import './partials/holdings';
+@import './partials/header';
+@import './partials/markets';
+
+.coin-info-card {
+  border-radius: 20px;
+  border: 0;
+  overflow: hidden;
+  background-color: transparent !important;
+  width: 100%;
+
+  .card-body {
+    padding: 0;
+  }
+
+  .coin-info-tabs {
+    background: rgba(var(--theme-text-i), 0.18);
+    border-bottom: 1px solid var(--theme-background);
+    white-space: nowrap;
+    flex-wrap: nowrap;
+    overflow: auto;
+    .nav-item {
+      .nav-link {
+        border-right: 1px solid var(--theme-background);
+        color: var(--theme-text);
+        cursor: pointer;
+        font-size: 13px;
+        height: 100%;
+        font-size: 13px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: 2px;
+        opacity: 1;
+        padding: 14px 22px;
+        text-align: center;
+
+        &.active {
+          border-bottom: 2px solid var(--theme-text-active);
+        }
+      }
+    }
+  }
+
+  .coin-info-socials {
+    background-color: rgba(var(--theme-text-i), 0.1)!important;
+    padding: 30px 54px;
+    @media(max-width: 578px) {
+      padding: 30px 10px;
+    }
+  }
+
+  .highcharts-background {
+    fill: transparent;
+  }
+
+  .coin-info-chart {
+    background-color: rgba(var(--theme-text-i), 0.1)!important;
+    min-height: 400px;
+    padding: 17px 27px 25px 27px;
+    @media(max-width: 578px) {
+      padding: 17px 0 25px;
+    }
+  }
+
+  .coin-chart-price {
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: right;
+    color: var(--theme-text);
+    @media(max-width: 578px) {
+      font-size: 13px;
+    }
+  }
+
+  .chart-period-switcher {
+    display: flex;
+    justify-content: space-between;
+    max-width: 800px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+
+    @media(max-width: 578px) {
+      padding-left: 10px;
+    }
+
+    span {
+      border-radius: 14px;
+      background-color: rgba(var(--theme-text-i), 0.07);
+      font-size: 15px;
+      font-weight: 500;
+      font-style: normal;
+      font-stretch: normal;
+      letter-spacing: normal;
+      text-align: center;
+      color: rgba(var(--theme-text-i), 0.85);
+      min-width: 80px;
+      margin-top: 10px;
+      padding: 0 14px;
+      height: 28px;
+      line-height: 28px;
+      cursor: pointer;
+      white-space: nowrap;
+
+      @media(max-width: 768px) {
+        margin-right: 10px;
+        min-width: unset;
+      }
+    }
+
+    span.active {
+      color: var(--theme-text-active);
+    }
+  }
+}

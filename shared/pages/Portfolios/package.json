@@ -1,0 +1,6 @@
+{
+  "name": "Portfolios",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./Portfolios.js"
+}

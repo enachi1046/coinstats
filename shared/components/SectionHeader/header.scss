@@ -1,0 +1,203 @@
+@import "../../assets/styles/variable";
+header {
+  display: flex;
+  align-items: center;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  z-index: 1000;
+  background: var(--theme-background);
+  height: rem(70);
+  min-height: rem(70);
+  .guide {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  @include mobile {
+    padding: 0 12px;
+    height: 60px;
+    min-height: 60px;
+  }
+}
+.mobileToggle, .mobile-menu-btn {
+  display: none;
+}
+.icon-logo {
+  font-size: rem(32);
+  color: var(--theme-text);
+  &:hover {
+    color: var(--theme-text-active);
+  }
+  @include mobile {
+    font-size: 26px;
+  }
+}
+.header-c {
+  display: flex;
+  align-items: center;
+  nav {
+    margin: 0 rem(30) 0 0;
+    display: flex;
+    a {
+      display: block;
+      color: rgba(var(--theme-text-i), 0.8);
+      font-size: rem(17);
+      font-weight: 500;
+      line-height: normal;
+      + a {
+        margin: 0 0 0 rem(42);
+      }
+      &:hover, &.active {
+        color: var(--theme-text-active);
+      }
+    }
+  }
+  .cs-btn {
+    line-height: rem(42);
+    min-width: inherit;
+  }
+}
+.header-c-inner {
+  display: flex;
+  align-items: center;
+}
+.light-switcher {
+  display: flex;
+  margin: 0 rem(30) 0 0;
+  font: 500 rem(10)/#{rem(17)} $f;
+  color: rgba(var(--theme-text-i), 0.8);
+  text-transform: uppercase;
+  cursor: pointer;
+  .switcher-check {
+    margin: 0 0 0 rem(11);
+    width: rem(29);
+    padding: 1px;
+    height: rem(17);
+    background: rgba(var(--theme-text-i), 0.5);
+    border-radius: rem(100);
+    transition: 300ms background;
+    i {
+      display: block;
+      width: rem(15);
+      height: rem(15);
+      background: var(--theme-background);
+      transition: 300ms background, 300ms margin;
+      border-radius: 100%;
+    }
+  }
+  input {
+    display: none;
+    &:checked ~ .switcher-check {
+      background: var(--theme-text-active);
+      i {
+        margin: 0 0 0 rem(12);
+        background: white;
+      }
+    }
+  }
+}
+@include mobile {
+  .header-c-inner {
+    flex-direction: column-reverse;
+    width: 100%;
+  }
+  .header-c {
+    position: fixed;
+    top: 60px;
+    left: -100%;
+    margin: 0;
+    width: 100%;
+    height: calc(100% - 60px);
+    z-index: 1050;
+    background: var(--theme-background);
+    box-shadow: 0 120px 0 var(--theme-background);
+    overflow-y: auto;
+    transform: translate3d(0, 0, 0);
+    transition: 300ms transform;
+    padding: 30px 20px;
+    align-items: flex-start;
+    .light-switcher {
+      width: 100%;
+      margin: 0;
+      padding: 14px 0;
+      justify-content: space-between;
+      font-size: 15px;
+      font-weight: 500;
+      letter-spacing: 2.5px;
+      .switcher-check {
+        width: 38px;
+        height: 22px;
+        i {
+          width: 20px;
+          height: 20px;
+        }
+      }
+      input:checked ~ .switcher-check i {
+        margin: 0 0 0 16px;
+      }
+    }
+    nav {
+      flex-direction: column;
+      margin: 30px 0 10px;
+      width: 100%;
+      a {
+        padding: 11px 0;
+        font-size: 21px;
+        font-weight: 500;
+        line-height: normal;
+        + a {
+          margin: 10px 0 0;
+        }
+      }
+    }
+    .cs-btn, .drop.hero-drop, .sing-in-div {
+      width: 100%;
+    }
+    .hero-drop > .drop-head {
+      justify-content: center;
+      p {
+        padding: 0;
+      }
+      &:after {
+        content: none;
+      }
+    }
+    .hero-drop > .drop-body {
+      position: static;
+    }
+  }
+  .mobile-menu-btn {
+    display: block;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    &:before, &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 16px;
+      width: 28px;
+      height: 1px;
+      background: var(--theme-text);
+      left: 6px;
+      transition: 300ms top, 300ms transform;
+    }
+    &:after {
+      top: 24px;
+    }
+  }
+  #mobileToggle:checked ~ {
+    .header-c {
+      transform: translate3d(100%, 0, 0);
+    }
+    .mobile-menu-btn {
+      &:before, &:after {
+        top: 50%;
+        transform: rotate(45deg);
+      }
+      &:after {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}

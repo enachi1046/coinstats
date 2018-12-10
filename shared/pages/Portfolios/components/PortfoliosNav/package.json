@@ -1,0 +1,6 @@
+{
+  "name": "PortfoliosNav",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./PortfoliosNav.js"
+}

@@ -1,0 +1,18 @@
+<?xml version="1.0" standalone="yes"?>
+<rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
+  <channel>
+    <title>Coin Stats</title>
+    <item>
+      <title>1.0.6</title>
+      <pubDate>Wed, 08 Aug 2018 17:56:11 +0400</pubDate>
+      <sparkle:minimumSystemVersion>10.11</sparkle:minimumSystemVersion>
+      <enclosure
+        url="https://coinstats.app/downloads/Coin%20Stats%201.6.0.zip"
+        sparkle:version="26"
+        sparkle:shortVersionString="1.0.6"
+        length="9411484"
+        type="application/octet-stream"
+        sparkle:dsaSignature="MCwCFCbC4Tmc3wkwArkjzExDGdP9dTX/AhRYfEJCm1TQEffdakH+uLlX101cCQ=="/>
+    </item>
+  </channel>
+</rss>

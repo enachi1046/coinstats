@@ -1,0 +1,341 @@
+@import './colors/dark';
+@import './colors/light';
+
+.dark-mode {
+  background-color: var(--theme-background);
+}
+
+.main-body.dark-mode {
+  background-color: var(--theme-background);
+  color: var(--theme-text);
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: var(--theme-text);
+  }
+
+  .page-wrapper {
+    background-color: var(--theme-background);
+  }
+
+  .bg-white-or-black{
+    background-color: #1d1c1c;
+  }
+  .left-sidebar,
+  .sidebar-nav {
+    background-color: #2e3d46;
+  }
+
+  .sidebar-nav ul li a {
+    color: #fff;
+
+    :hover {
+      color: #20aee3;
+    }
+
+    .active {
+      color: #20aee3;
+    }
+
+    i {
+      color: #fff;
+
+      :hover {
+        color: #20aee3;
+      }
+    }
+  }
+
+  .sidebar-nav ul li a.active {
+    color: #20aee3;
+
+    i {
+      color: #20aee3;
+    }
+  }
+
+  .card {
+    border-color: $dark-background-color;
+  }
+
+  .card-body {
+    // background-color: #2e3d46;
+    color: #fff;
+  }
+
+  .portfolio-table-row:hover{
+    background-color: rgba(255, 255, 255, 0.07);
+  }
+
+  .add-portfolio-btn {
+    background: #1C1B1B;
+  }
+
+  .add-transaction-btn {
+    background: #1C1B1B;
+  }
+
+  .highcharts-tooltip{
+    .highcharts-tooltip-box{
+      fill: #1C1B1B;
+    }
+    text{
+      fill: white !important;
+    }
+  }
+
+  .add-portfolio-btn {
+    border: 1px solid #FFA959;
+    color: #FFA959;
+  }
+
+  .add-transaction-btn {
+    border: 1px solid #FFA959;
+    color: #FFA959;
+  }
+
+  .small-btns{
+    background-color: rgba(255, 255, 255, 0.07);
+    color: white;
+  }
+
+  .vtabs {
+    // background-color: #2e3d46;
+
+    .tabs-vertical {
+      li .nav-link {
+        color: #fff;
+        background: none;
+      }
+
+      li .nav-link.active {
+        color: #20aee3;
+      }
+
+      li .nav-link:hover {
+        color: #20aee3;
+      }
+
+      .active {
+        background: none;
+      }
+    }
+  }
+
+  .settings-main-div {
+    background: #fff;
+    min-height: 300px;
+    padding: 30px;
+  }
+
+  .coin-stats {
+    padding-top: 0.5rem;
+  }
+
+  .topbar .top-navbar .navbar-header {
+    background-color: #2e3d46;
+
+    .coin-stats-logo-text {
+      color: #fff;
+    }
+  }
+
+  .footer {
+    background-color: #2e3d46;
+    color: #fff;
+  }
+  // favorites
+  .card {
+    // background-color: #2e3d46;
+  }
+
+  .portfolio-name-bg {
+    max-height: 26px;
+    background: #2C2B2B;
+  }
+
+  .currency{
+    background-color: #1C1B1B;
+  }
+
+  .currency:hover{
+    background-color: $dark-background-color;
+  }
+
+  .card {
+    background-color: #1C1B1B;
+    color: white;
+  }
+
+  .top-bar-base-card {
+    border-color: #1C1B1B !important;
+  }
+
+  .portfolio-card {
+    // border-color: #1C1B1B !important;
+  }
+
+  .portfolio-base-div {
+    min-height: 380px;
+    color: white;
+    // background-color: #1C1B1B !important;
+
+    h3 {
+      color: white;
+    }
+  }
+
+  .list-group,
+  .list-group-item {
+    background: #1c1b1b;
+    color: #fff;
+  }
+
+  .vtabs .tabs-vertical li .nav-link {
+    color: white;
+  }
+
+  .import-btn-img,
+  .export-btn-img {
+    background-image: url('/images/download-portfolio-dark.svg');
+    background-position: center;
+    background-size: 15px;
+    background-repeat: no-repeat;
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    right: 0;
+  }
+
+  .import-btn-img {
+    transform: rotate(180deg);
+  }
+
+  .add-first-btn {
+    box-shadow: none;
+    transition: unset;
+    border: 1px solid #FFA959;
+    color: #FFA959;
+    background: #222 !important;
+    width: 275px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 25px;
+    text-align: center;
+  }
+
+  .add-first-btn:hover {
+    opacity: unset !important;
+    box-shadow: unset !important;
+    color: #FFA959 !important;
+    border: 1px solid #FFA959 !important;
+  }
+
+  .add-first-btn:focus {
+    opacity: unset !important;
+    box-shadow: unset !important;
+    color: #FFA959 !important;
+    border: 1px solid #FFA959 !important;
+  }
+
+  .paste-btn {
+    margin-top: 20px;
+    box-shadow: none;
+    transition: unset;
+    width: 110px;
+    cursor: pointer;
+    background: #222 !important;
+    color: #FFA959;
+    border: 1px solid #FFA959;
+    padding: 10px;
+    border-radius: 25px;
+    text-align: center;
+  }
+
+  .paste-btn:hover {
+    opacity: unset !important;
+    box-shadow: unset !important;
+    color: #FFA959 !important;
+    border: 1px solid #FFA959 !important;
+  }
+
+  .paste-btn:focus {
+    opacity: unset !important;
+    box-shadow: unset !important;
+    color: #FFA959 !important;
+    border: 1px solid #FFA959 !important;
+  }
+
+  .input-exchange-api {
+    height: 63px;
+    width: 345px;
+    background: rgba(255, 255, 255, .04);
+    color: white;
+    border: 1px solid transparent;
+  }
+
+  @media(max-width: 520px) {
+    .input-exchange-api {
+      height: 63px;
+      width: 300px;
+      background: rgba(255, 255, 255, .04);
+      color: white;
+      border: 1px solid transparent;
+    }
+  }
+  .submit-exchange-btn {
+    box-shadow: none;
+    transition: unset;
+    width: 180px;
+    cursor: pointer;
+    background: #222 !important;
+    color: #FFA959;
+    border: 1px solid #FFA959;
+    padding: 10px;
+    border-radius: 25px;
+    text-align: center;
+  }
+
+  .orange{
+    color: #FFA959;
+  }
+
+  .red{
+    color: #FF1C37;
+  }
+
+  .submit-exchange-btn:hover {
+    opacity: unset !important;
+    box-shadow: unset !important;
+    color: #FFA959 !important;
+    border: 1px solid #FFA959 !important;
+  }
+
+  .submit-exchange-btn:focus {
+    opacity: unset !important;
+    box-shadow: unset !important;
+    color: #FFA959 !important;
+    border: 1px solid #FFA959 !important;
+  }
+}
+
+@media(max-width: 905px) {
+  .portfolio-card{
+    max-width: 850px !important;
+    overflow-x: auto !important;
+    .tabs-vertical{
+      min-width: 242px;
+    }
+    .tab-content{
+      min-width: 600px;
+    }
+  }
+}
+
+.background-overflow{
+  overflow: hidden !important;
+}

@@ -1,0 +1,3 @@
+[submodule "public/direct"]
+	path = public/direct
+	url = git@bitbucket.org:inomma/coin-stats-direct-landing.git

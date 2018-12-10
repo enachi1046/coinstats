@@ -1,0 +1,6 @@
+admin: admin: khpcQ7CaTt7pjH4g
+coinfantasy: admin: gb4ZGu2rJKCfBpPy
+
+mongodb:\/\/admin:gb4ZGu2rJKCfBpPy@10.0.23.225:27017\/coinfantasy
+
+db.createUser({ user: "admin", pwd: "gb4ZGu2rJKCfBpPy", roles: [ "readWrite", "dbAdmin" ] })

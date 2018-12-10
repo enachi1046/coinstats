@@ -1,0 +1,53 @@
+@import '../../../../../assets/styles/colors/dark';
+@import '../../../../../assets/styles/colors/light';
+
+.export-btn {
+  color: #fff;
+  height: 100%;
+  width: 100%;
+  display: block;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+
+  &:hover,
+  &.export-btn-loading {
+    color: $dark-orange;
+  }
+
+  .mini-loader {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .fas {
+    position: absolute;
+    right: 0;
+    top: .15rem;
+  }
+}
+
+.main-body.light-mode {
+  .export-btn:not(:hover) {
+    color: #676f73;
+  }
+}
+
+.become-pro-btn{
+  display: inline-block;
+  width: calc(100% - 32px);
+  background: linear-gradient(to right, #FFC16B 0%, #FF7A59 100%);
+  color: #fff;
+  padding: 9px;
+  min-height: 43px;
+  cursor: pointer;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 25px;
+}

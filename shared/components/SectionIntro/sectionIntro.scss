@@ -1,0 +1,116 @@
+@import "../../assets/styles/variable";
+.bottom-intro {
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  margin: rem(88) 0 0;
+  @include mobile {
+    margin: 70px 0 0;
+    flex-direction: column;
+  }
+  > li {
+    position: relative;
+    &:first-child {
+      display: flex;
+      flex-direction: column;
+      padding: 0 per(72, 1440) 0 per(102, 1440);
+      width: per(974, 1440);
+      @include mobile {
+        width: 100%;
+      }
+    }
+    &:last-child {
+      width: per(466, 1440);
+      @include mobile {
+        width: 100%;
+      }
+    }
+  }
+  img {
+    display: block;
+    width: 123%;
+    @include mobile {
+      width: 100%;
+      margin: 0 0 60px;
+    }
+    ~ img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      animation: float 4s ease-in-out infinite;
+      &:nth-child(2) {
+        animation-delay: 500ms;
+      }
+      &:nth-child(3) {
+        animation-delay: 1s;
+      }
+      &:nth-child(4) {
+        animation-delay: 1.5s;
+      }
+      &:nth-child(5) {
+        animation-delay: 2s;
+      }
+      &:nth-child(6) {
+        animation-delay: 2.5s;
+      }
+    }
+  }
+  h1 {
+    font-size: rem(62);
+    font-weight: 100;
+    line-height: normal;
+    text-align: center;
+    color: $hero;
+    margin: 0 0 rem(13);
+    @include mobile {
+      font-size: 28px;
+      margin: 0 0 48px;
+    }
+    &:first-line {
+      color: var(--theme-text);
+    }
+    br {
+      @media screen and (max-width: 1100px){
+        display: none;
+        @include mobile {
+          display: block;
+        }
+      }
+    }
+  }
+}
+@keyframes float {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-20px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
+.bottom-intro-l {
+  font-size: rem(26);
+  line-height: rem(44);
+  margin: 0 0 rem(60);
+  @include mobile {
+    margin: 0 0 40px;
+    font-size: 20px;
+    line-height: normal;
+  }
+  li {
+    display: flex;
+    div {
+      font-size: rem(28);
+      color: $hero;
+      margin: 0 rem(20) 0 0;
+      line-height: inherit;
+    }
+    @include mobile {
+      + li {
+        margin: 16px 0 0;
+      }
+    }
+  }
+}

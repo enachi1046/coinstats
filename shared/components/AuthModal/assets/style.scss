@@ -1,0 +1,109 @@
+
+.auth-modal {
+  .modal-content {
+    border-radius: 0;
+    h1, h2, h3, h4, h5, h6, p {
+      color: #455a64;
+    }
+  }
+  .modal-header {
+    padding-top: 47px;
+  }
+  .modal-title {
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+  }
+
+  .password{
+    font-weight: bold;
+    font-family: Helvetica;
+    font-size: 16px;
+  }
+
+  .btn-back {
+    color: #b0afaf;
+    position: absolute;
+    left: 18px;
+    top: 13px;
+    font-size: 14px;
+    padding: 0;
+    line-height: 15.5px;
+    .fa {
+      color: #b0afaf;
+    }
+  }
+
+  .error-message {
+    height: 30px;
+    line-height: 30px;
+    margin-top: -15px;
+    margin-bottom: 5px;
+  }
+}
+
+#home .nav-link.highlighted {
+  color: #fff;
+  opacity: .9;
+  &:hover {
+    opacity: 1;
+  }
+
+  padding: 0 22px 0 0;
+}
+
+.hide-dropdown{
+  display: none;
+}
+
+.show-dropdown{
+  display: unset;
+  position: absolute;
+  width: 100%;
+}
+
+
+.main-body.light-mode{
+  .Dropdown-option{
+    background-color: white !important;
+    color: #222;
+    opacity: unset !important;
+  }
+  .become-pro{
+    color: white;
+    background: linear-gradient(to right,#FFC16B 0%, #FF7A59 100%) !important;
+  }
+}
+
+.input-in-modal {
+  width: 300px;
+  margin: 0 auto;
+  border: 0;
+  border-bottom: 2px solid #1c1b1b2e;
+  padding: 5px 15px;
+  margin-bottom: 15px;
+  outline: none;
+}
+
+.already-have-div {
+  text-align: right;
+  width: 300px;
+  margin: 20px auto 0;
+}
+
+.already-have {
+  font-size: 13px;
+  // color: $light-dark-orange;
+  font-weight: bold;
+}
+
+.become-pro{
+  color: #222;
+  height: 25px;
+  width: 50px;
+  margin-left: 10px;
+  text-align: center;
+  border-radius: 8px;
+  background: linear-gradient(to right, #FFC16B, #FF7A59) !important;
+  opacity: unset !important;
+}

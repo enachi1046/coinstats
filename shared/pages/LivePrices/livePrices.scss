@@ -1,0 +1,214 @@
+@import "../../assets/styles/variable";
+.statistics-title {
+  display: flex;
+  font-size: rem(24);
+  line-height: normal;
+  margin: rem(30) 0 rem(42);
+  @include mobile {
+    flex-direction: column;
+    margin: 18px 0 6px;
+    text-align: center;
+  }
+  li {
+    + li {
+      margin: 0 0 0 rem(49);
+      @include mobile {
+        margin: 10px 0 0;
+      }
+    }
+  }
+  span {
+    color: $hero;
+  }
+}
+.search-and-pagination {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: rem(20) 0;
+  @include mobile {
+    flex-direction: column;
+  }
+  .pagination-holder {
+    display: flex;
+    align-items: center;
+    @include mobile {
+      justify-content: space-between;
+      margin: 20px 0 0;
+    }
+    &:only-child {
+      width: 100%;
+      justify-content: flex-end;
+      @include mobile {
+        justify-content: space-between;
+        margin: 0;
+      }
+    }
+  }
+}
+.pagination-buttons {
+  display: flex;
+  a {
+    display: block;
+    width: rem(46);
+    background: rgba(var(--theme-text-i), 0.07);
+    line-height: rem(40);
+    text-align: center;
+    border-radius: rem(100) 0 0 rem(100);
+    font-size: rem(14);
+    color: rgba(var(--theme-text-i), 0.35);
+    + a {
+      margin: 0 0 0 1px;
+      border-radius: 0 rem(100) rem(100) 0;
+    }
+    &:hover {
+      background: $hero;
+      color: set-color($hero);
+    }
+  }
+}
+.reg-table {
+  width: 100%;
+  border-spacing: 0 1px;
+  font-size: rem(19);
+  border-collapse: separate;
+  @include mobile {
+    font: 300 16px $f;
+    line-height: normal;
+  }
+  td, th {
+    vertical-align: middle;
+    padding: 0 rem(10);
+    &:first-child {
+      padding-left: rem(38);
+    }
+    &:last-child {
+      padding-right: rem(38);
+    }
+    &.fit {
+      width: 1%;
+      white-space: nowrap;
+    }
+    @include mobile {
+      padding: 0 5px;
+      &:first-child {
+        padding-left: 10px;
+      }
+      &:nth-child(4) {
+        padding-right: 10px;
+        ~ {
+          th, td {
+            display: none !important;
+          }
+        }
+      }
+    }
+  }
+  th {
+    text-align: left;
+    padding-top: rem(12);
+    padding-bottom: rem(12);
+    font-size: rem(17);
+    font-weight: normal;
+    line-height: normal;
+    background-color: rgba(var(--theme-text-i), 0.18);
+    &:first-child {border-radius: rem(20) 0 0 0}
+    &:last-child {border-radius: 0 rem(20) 0 0}
+    @include mobile {
+      font-size: 14px;
+      white-space: nowrap;
+      &:nth-child(4) {
+        border-radius: 0 rem(20) 0 0
+      }
+    }
+    p {
+      display: inline-block;
+      vertical-align: top;
+      position: relative;
+      padding: 0 rem(22) 0 0;
+      cursor: pointer;
+      @include mobile {
+        padding: 0 rem(18) 0 0;
+      }
+      &:after {
+        content: "\e90a";
+        display: block;
+        font: rem(7)/#{rem(12)} icomoon;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        margin: -#{rem(6)} 0 0;
+        opacity: 0;
+        transition: 300ms transform, 300ms opacity;
+      }
+      &.order_class_asc, &.order_class_desc {
+        &:after {
+          opacity: 0.35;
+        }
+      }
+      &.order_class_desc:after {
+        transform: rotate(180deg);
+      }
+    }
+    &.data-cell {
+      p {
+        padding: 0 0 0 rem(22);
+        @include mobile {
+          padding: 0 0 0 rem(18);
+        }
+        &:after {
+          right: auto;
+          left: 0;
+        }
+      }
+    }
+  }
+  td {
+    background-color: rgba(var(--theme-text-i), 0.07);
+    padding-top: rem(21);
+    padding-bottom: rem(21);
+    transition: 300ms background;
+    @include mobile {
+      padding-top: rem(14);
+      padding-bottom: rem(14);
+    }
+    a {
+      color: inherit;
+    }
+  }
+  tr.cursor-pointer:hover td {
+    background-color: rgba(var(--theme-text-i), 0.17);
+  }
+  tbody tr:last-child td {
+    &:first-child {border-radius: 0 0 0 rem(20)}
+    &:last-child {border-radius: 0 0 rem(20) 0}
+    @include mobile {
+      &:nth-child(4) {border-radius: 0 0 rem(20) 0}
+    }
+  }
+  .data-cell {
+    text-align: right;
+    width: 18%;
+  }
+}
+.name-content {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  img {
+    display: block;
+    height: rem(38);
+    width: rem(38);
+    object-fit: contain;
+    object-position: center;
+    margin: -#{rem(7)} rem(11) -#{rem(6)} 0;
+  }
+  @include mobile {
+    white-space: normal;
+    img {
+      width: 25px;
+      height: 25px;
+      margin: -1px 8px -1px 0;
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "name": "PortfolioCoin",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./PortfolioCoin.js"
+}

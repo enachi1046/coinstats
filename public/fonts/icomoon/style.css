@@ -1,0 +1,102 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?gheha7');
+  src:  url('fonts/icomoon.eot?gheha7#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.woff2?gheha7') format('woff2'),
+    url('fonts/icomoon.ttf?gheha7') format('truetype'),
+    url('fonts/icomoon.woff?gheha7') format('woff'),
+    url('fonts/icomoon.svg?gheha7#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-close:before {
+  content: "\e918";
+}
+.icon-checked:before {
+  content: "\e917";
+}
+.icon-link:before {
+  content: "\e910";
+}
+.icon-reddit:before {
+  content: "\e911";
+}
+.icon-copy:before {
+  content: "\e912";
+}
+.icon-down:before {
+  content: "\e913";
+}
+.icon-stats-news-logo:before {
+  content: "\e914";
+}
+.icon-star:before {
+  content: "\e915";
+}
+.icon-up:before {
+  content: "\e916";
+}
+.icon-steemit:before {
+  content: "\e900";
+}
+.icon-medium:before {
+  content: "\e901";
+}
+.icon-telegram:before {
+  content: "\e902";
+}
+.icon-facebook:before {
+  content: "\e903";
+}
+.icon-twitter:before {
+  content: "\e904";
+}
+.icon-pro:before {
+  content: "\e905";
+}
+.icon-chat:before {
+  content: "\e906";
+}
+.icon-statistics:before {
+  content: "\e907";
+}
+.icon-news:before {
+  content: "\e908";
+}
+.icon-case:before {
+  content: "\e909";
+}
+.icon-arrow-top:before {
+  content: "\e90a";
+}
+.icon-arrow-right:before {
+  content: "\e90b";
+}
+.icon-arrow-left:before {
+  content: "\e90c";
+}
+.icon-search:before {
+  content: "\e90d";
+}
+.icon-drop:before {
+  content: "\e90e";
+}
+.icon-logo:before {
+  content: "\e90f";
+}

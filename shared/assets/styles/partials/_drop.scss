@@ -1,0 +1,154 @@
+@import '../variable';
+
+.drop-head {
+  display: flex;
+  align-items: center;
+  padding: 0 0 0 rem(16);
+  border-radius: rem(100);
+  height: rem(40);
+  background: rgba(set-color($bg), 0.07);
+  font-size: rem(15);
+  position: relative;
+  cursor: pointer;
+
+  select, input, textarea {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    display: block;
+  }
+
+  span {
+    opacity: 0.5;
+    margin: 0 rem(4) 0 0;
+  }
+
+  p,
+  select {
+    font-weight: 400;
+    padding: 0 rem(45) 0 0;
+  }
+
+  select {
+    display: none;
+    @include mobile {
+      display: block;
+      font-size: 15px;
+      line-height: normal;
+      color: set-color($bg);
+      font-family: $f;
+    }
+  }
+
+  &:after {
+    content: "\e90e";
+    opacity: 0.5;
+    display: block;
+    font: rem(8)/#{rem(10)} icomoon;
+    position: absolute;
+    top: 50%;
+    margin: -#{rem(4)} 0 0;
+    right: rem(18);
+    transition: 300ms transform;
+    pointer-events: none;
+  }
+
+  .hero-drop > & {
+    height: rem(42);
+    background: $hero;
+    color: set-color($hero);
+    font-size: rem(16);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+
+    p,
+    select {
+      font-weight: 500;
+    }
+
+    &:after {
+      opacity: 1;
+    }
+  }
+
+  .active > & {
+    &:after {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.drop-body {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  border-radius: rem(26);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  background-color: $bg;
+  margin: rem(14) 0 0;
+  display: none;
+
+  ul {
+    background-color: rgba(set-color($bg), 0.07);
+    border-radius: rem(26);
+    padding: rem(9) 0;
+  }
+
+  li {
+    font-size: rem(16);
+    line-height: rem(20);
+    font-weight: 500;
+    padding: rem(10) 0;
+    transition: 300ms color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    &.active,
+    &:hover {
+      color: $hero;
+    }
+  }
+
+  .hero-drop > & {
+    margin: rem(10) 0 0;
+
+    li {
+      padding: rem(16) 0;
+    }
+  }
+
+  .icon-pro {
+    font-size: rem(15);
+    margin: 0 0 0 rem(6);
+  }
+
+  .active > & {
+    display: block;
+  }
+}
+
+.drop {
+  position: relative;
+  z-index: 40;
+  margin: 0 rem(20) 0 0;
+
+  &.active {
+    z-index: 200;
+  }
+
+  &.hero-drop {
+    margin: 0;
+  }
+
+  &:not(.hero-drop) {
+    @include mobile {
+      .drop-body,
+      .drop-head p {
+        display: none !important;
+      }
+    }
+  }
+}

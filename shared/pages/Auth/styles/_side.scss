@@ -1,0 +1,401 @@
+/***
+ *       _____       _
+ *      / ___/( )   | |
+ *     | (___  _  __| | ___
+ *      \___ \| |/ _` |/ _ \
+ *      ____) | | (_| |  __/
+ *     /_____/|_|\__,_|\___/
+ *
+ *
+ */
+.side {
+	position: fixed;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	height: 100%;
+	z-index: 100;
+	padding: 70px 4%;
+	pointer-events: none;
+	opacity: 0;
+	transition: opacity 0.5s;
+	transform: translate3d(0, 0, 0);
+
+	@include media(1380px, min) {
+		& {
+			padding-left: 55px;
+			padding-right: 55px;
+		}
+	}
+
+	.page-loaded & { opacity: 1; }
+
+	&.large { padding: calc(5.56% + 50px) 2%; }
+
+	&.left { left: 0; right: inherit; }
+	&.right { right: 0; left: inherit; }
+
+	/* compact navigation */
+	&.compact {
+		padding: 30px 2%;
+
+		& .navigation li {
+			width: 15px;
+			height: 7px;
+			margin: 0;
+			-webkit-box-shadow: none;
+			box-shadow: none;
+			border-radius: 0;
+			background: #fff;
+			opacity: 0.2;
+			padding: 1px;
+			cursor: pointer;
+
+			&.selected,
+			&:hover {
+				 opacity: 1;
+			}
+
+			&:after {
+				 display: none;
+			}
+
+			&:before {
+				margin: 0 8px !important;
+				top: -10px;
+			}
+
+			.whiteSlide & {
+				background: $default-dark-color;
+			}
+		}
+
+		&:not(.square) .navigation li:first-child {
+			border-radius: 10px 10px 0 0;
+		}
+
+		&:not(.square) .navigation li:last-child {
+			 border-radius: 0 0 10px 10px;
+		}
+	}
+
+	/* for nav in panel */
+	.panel & {
+		position: relative;
+		display: inline;
+		height: auto;
+		padding: 0;
+	}
+
+	.slides.whiteSlide & svg:not([fill]) {
+		 fill: $default-dark-color;
+	}
+}
+
+.navigation {
+	display: table;
+	height: 100%;
+
+	ul {
+		display: table-cell;
+		vertical-align: middle;
+	}
+
+	* {
+		pointer-events: all;
+	}
+
+	li {
+		fill: #fff;
+		display: block;
+		background: transparent;
+		padding: 9px;
+		margin: 0 -9px;
+		cursor: pointer;
+		position: relative;
+	}
+
+	li:after {
+		content: "";
+		display: block;
+		width: 15px;
+		height: 15px;
+		border-radius: 7px;
+		opacity: 0.5;
+		background: #fff;
+		box-shadow: 0 0 1px #303030;
+		transition: 0.25s;
+	}
+
+	li.selected:after{
+		opacity: 1;
+	}
+
+	li:hover:after {
+		opacity: 1;
+	}
+
+	/* sizes */
+	.medium & li:after {
+		width: 10px;
+		height: 10px;
+		border-radius: 5px;
+	}
+
+	.small & li:after {
+		width: 6px;
+		height: 6px;
+		border-radius: $default-border-radius;
+	}
+
+	li[data-title]:before {
+		content: attr(data-title);
+		position: absolute;
+		right: 100%;
+		top: 1px;
+		background: rgba(0,0,0, 0.7);
+		color: #fff;
+		font-size: 14px;
+		min-width: 50px;
+		border-radius: $rounded-border-radius;
+		padding: 7px 12px;
+		font-weight: 500;
+		display: inline-block;
+		text-align: center;
+		white-space: nowrap;
+		box-shadow: 0 0 0 1px rgba(255,255,255,0.1);
+		pointer-events: none;
+		visibility: hidden;
+	}
+
+	li:hover:before {
+		visibility: visible;
+	}
+
+	.left & li:before {
+		left: 100%;
+		right: auto;
+	}
+
+	.panel.bottom & li:before {
+		transform: translateY(-100%) translateX(-50%);
+		left: 14px;
+		top: -2px;
+	}
+
+	/* navigation styles */
+
+	/* stroke */
+	.stroke & li:after {
+		border-color: #fff;
+		border-style: solid;
+		border-width: 2px;
+		background-color: transparent;
+	}
+
+	.stroke.small & li:after {
+		border-width: 1px;
+	}
+
+	.stroke & li.selected:after {
+		background: #fff;
+	}
+
+	.stroke & li:hover:after {
+		 background: #fff;
+	}
+
+	/* square */
+	.square & li:after {
+		border-radius: 0;
+	}
+	.square.small & li:after {
+		border-radius: 0;
+	}
+
+	/* diamond */
+	.diamond & li:after {
+		border-radius: 0px;
+		transform: rotate(45deg) scale(0.72);
+	}
+	.diamond.medium & li:after {
+		transform: rotate(45deg) scale(0.88);
+	}
+	.diamond.small & li:after {
+		transform: rotate(45deg) scale(1);
+	}
+
+	/* line */
+	.line & {
+		li {
+			margin: 0 -9px;
+			padding: 5px 9px;
+			text-align: right;
+			font-size: 0;
+
+			&:after {
+				height: 3px;
+				display: inline-block;
+				text-align: right;
+				background: #fff;
+				border: none;
+			}
+
+			&:before {
+				margin-top: -10px;
+			}
+
+			&.selected:after {
+				width: 25px;
+			}
+		}
+	}
+
+	.line.left & li {
+		text-align: left;
+	}
+
+	.line.medium & li {
+		margin: 0 -5px;
+		padding: 4px 8px;
+
+		&.selected:after {
+			width: 19px;
+		}
+	}
+
+	.line.small & li {
+		margin: 0;
+		padding: 4px 6px;
+
+		&.selected:after {
+			width: 13px;
+		}
+	}
+
+	.pole & li {
+		margin: 0 1px 0 2px;
+		padding: 2px 9px;
+		text-align: right;
+		font-size: 0;
+
+		&:after {
+			height: 20px;
+			width: 4px;
+			display: inline-block;
+			transition: 0.5s;
+			text-align: right;
+			background: #fff;
+			border-radius: 1px;
+			border: none;
+		}
+
+		&:before {
+			margin-top: -3px;
+		}
+
+		&.selected {
+			&:after {
+				height: 60px;
+			}
+
+			&:before {
+				margin-top: 19px;
+			}
+		}
+	}
+
+	.pole.medium & li {
+		margin: 0 2px;
+
+		&:after {
+			height: 15px;
+			width: 3px;
+		}
+
+		&:before {
+			margin-top: -5px;
+		}
+
+		&.selected {
+			&:after {
+				height: 45px;
+			}
+
+			&:before {
+   			margin-top: 10px;
+			}
+		}
+	}
+
+	.pole.small & li {
+		margin: 0 2px;
+
+		&:after {
+			height: 10px;
+			width: 3px;
+		}
+
+		&:before {
+			margin-top: -7px;
+		}
+
+		&.selected {
+			&:after {
+				height: 30px;
+			}
+
+			&:before {
+   			margin-top: 2px;
+			}
+		}
+	}
+
+	/* nav colors for white slide */
+	.slides.whiteSlide & li:after {
+		background: $default-dark-color;
+		box-shadow: 0 0 1px #fff;
+	}
+
+	.slides.whiteSlide .stroke & li:after {
+		border-color: $default-dark-color;
+		background: transparent;
+	}
+
+	.slides.whiteSlide .stroke & li:hover:after {
+		background: #303030;
+	}
+
+	.slides.whiteSlide .stroke & li.selected:after {
+		border-color: #303030;
+		background: $default-dark-color;
+	}
+
+	.panel &,
+	.panel & ul {
+		 display: inline;
+	}
+
+	.panel & li {
+		display: inline-block;
+		margin: -9px 0;
+	}
+
+	.panel .side.small & li {
+		 margin: 0;
+	}
+
+	.sideArrow {
+		width: 31px;
+		height: 72px;
+		margin: 0px -9px;
+
+		@include media($phablet - 1, max) {
+			& {
+				width:17px;
+				height:40px;
+			}
+		}
+	}
+}
+/* End of Side */
